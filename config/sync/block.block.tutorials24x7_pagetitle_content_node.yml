@@ -1,0 +1,27 @@
+uuid: a7cf3baa-92cf-49ca-a4e6-50492e03ef14
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - tutorials24x7
+id: tutorials24x7_pagetitle_content_node
+theme: tutorials24x7
+region: content
+weight: -14
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page Title Content Node'
+  label_display: '0'
+  provider: core
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      blog: blog

@@ -1,0 +1,56 @@
+uuid: 82394445-cfc8-4c8e-9039-c5dad0b67cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_author_description
+    - field.field.user.user.field_social_media_links
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - social_media_links_field
+    - user
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: -10
+    region: content
+  contact:
+    weight: 5
+    region: content
+  field_author_description:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_social_media_links:
+    type: social_media_links_field_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 0
+    region: content
+  timezone:
+    weight: 6
+    region: content
+  user_picture:
+    type: image_image
+    weight: -1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  langcode: true

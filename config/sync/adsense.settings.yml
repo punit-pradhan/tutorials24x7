@@ -1,0 +1,25 @@
+_core:
+  default_config_hash: szAlkkiAQdfkGBiyrqdWQOMQ0aszBwQ2kha8a9_c8Hg
+adsense_unblock_ads: false
+adsense_test_mode: true
+adsense_disable: false
+adsense_placeholder: true
+adsense_placeholder_text: 'Google AdSense'
+adsense_secret_language: ''
+adsense_managed_page_level_ads_enabled: false
+adsense_access_pages:
+  id: request_path
+  pages: ''
+  negate: '0'
+adsense_basic_id: pub-000000000000000
+adsense_id_module: adsense_basic
+adsense_managed_async: true
+adsense_managed_defer: true
+adsense_cse_logo: adsense_cse_branding_right
+adsense_cse_color_box_background: FFFFFF
+adsense_cse_encoding: UTF-8
+adsense_cse_textbox_length: 31
+adsense_cse_language: en
+adsense_cse_country: www.google.com
+adsense_cse_frame_width: 800
+adsense_cse_ad_location: adsense_cse_loc_top_right

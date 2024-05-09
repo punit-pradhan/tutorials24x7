@@ -1,0 +1,155 @@
+@use "../typography/importers" as *;
+
+// Dark and light mode switch
+.dark-and-light-mode {
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    cursor: pointer;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #ebf8ff;
+
+    @include media(null, $bp-large) {
+      width: 75px;
+      margin: 0;
+      height: 40px;
+    }
+  }
+
+  // Hide default input checkbox
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  // Slider for the switch
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+  }
+
+  // Slider handle
+  .slider:before {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: $blue-color;
+    top: 4px;
+    transform: translateX(4px);
+    transition: 0.4s;
+
+    @include media(null, $bp-large) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  // Input checked state
+  input:checked + .slider {
+    background-color: $footer-background;
+    box-shadow: 0 0 1px $footer-background;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(calc(100% + 8px));
+
+    @include media(null, $bp-large) {
+      transform: translateX(34px);
+    }
+  }
+
+  .icons {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    .light,
+    .dark {
+      width: calc(50% - 1.5px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: $font-size-sm;
+
+        @include media(null, $bp-large) {
+          font-size: $font-size-md;
+        }
+      }
+    }
+
+    .light i {
+      color: $text-color;
+    }
+
+    .dark i {
+      color: $gray-light-color;
+      transform: rotate(130deg);
+
+      &:hover {
+        color: $light-blue-color;
+      }
+    }
+  }
+
+  // Styling for dark icon when switch is checked
+  .switch input:checked + .slider + .icons .dark i {
+    color: $text-color;
+  }
+
+  // Styling for light icon when switch is checked and hovered
+  .switch input:checked + .slider + .icons .light:hover i {
+    color: $green-color;
+  }
+}
+
+// Mobile theme switcher
+#theme_switcher_mobile {
+  @include media(null, $bp-large) {
+    .dark-and-light-mode {
+      @include container-styles;
+      padding: 7.5px 20px;
+      align-items: center;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 20px;
+        bottom: -1px;
+        right: 20px;
+        height: 1px;
+        background-color: var(--navbar-second-level-border-color);
+      }
+
+      .slider {
+        background-color: var(--body-color);
+      }
+    }
+
+    // Title for dark and light mode
+    .dark-and-light-mode-title {
+      color: var(--navbar-text-color);
+      font-size: $font-size-sm;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: -0.1px;
+      margin-bottom: 0;
+    }
+  }
+}

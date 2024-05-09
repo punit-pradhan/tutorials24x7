@@ -1,0 +1,88 @@
+uuid: f542bf6d-ccea-4f94-b0fa-873ad115e4d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - node.type.article
+    - node.type.blog
+    - node.type.page
+    - taxonomy.vocabulary.tags
+    - workflows.workflow.blog
+    - workflows.workflow.editorial
+  module:
+    - adsense
+    - comment
+    - content_moderation
+    - contextual
+    - file
+    - filter
+    - moderation_note
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+_core:
+  default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access moderation notes'
+  - 'access toolbar'
+  - 'access tour'
+  - 'administer url aliases'
+  - 'create article content'
+  - 'create blog content'
+  - 'create moderation note replies'
+  - 'create moderation notes'
+  - 'create page content'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete article revisions'
+  - 'delete blog revisions'
+  - 'delete own article content'
+  - 'delete own blog content'
+  - 'delete own files'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'edit any blog content'
+  - 'edit own article content'
+  - 'edit own blog content'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit terms in tags'
+  - 'hide adsense'
+  - 'resolve moderation notes'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert blog revisions'
+  - 'revert page revisions'
+  - 'use blog transition assign_for_review'
+  - 'use blog transition content_approved'
+  - 'use blog transition create_new_draft'
+  - 'use blog transition publish'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view article revisions'
+  - 'view blog revisions'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view the administration theme'

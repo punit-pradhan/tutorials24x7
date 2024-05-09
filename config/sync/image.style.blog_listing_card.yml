@@ -1,0 +1,15 @@
+uuid: af4dd6d5-73d1-4698-8c5f-334a587c1bfa
+langcode: en
+status: true
+dependencies: {  }
+name: blog_listing_card
+label: 'Blog Listing Card'
+effects:
+  b2de04d2-8bc8-4717-b422-0feebb38b1d6:
+    uuid: b2de04d2-8bc8-4717-b422-0feebb38b1d6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 512
+      height: 288
+      anchor: center-center

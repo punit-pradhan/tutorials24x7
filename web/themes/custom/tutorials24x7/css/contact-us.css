@@ -1,0 +1,112 @@
+/* Import typography styles */
+/* Styles for the about us content blocks */
+#block-tutorials24x7-contactuscontentblock {
+  /* Set width */
+  width: calc(50% - 10px);
+}
+@media only screen and (max-width: 768px) {
+  #block-tutorials24x7-contactuscontentblock {
+    width: 100%;
+  }
+}
+
+/* Styles for the contact us section */
+.contact_us {
+  /* Text styles */
+  /* Image styles */
+}
+.contact_us__text h2 {
+  /* Heading styles */
+  color: var(--navbar-text-color);
+  font-size: 55px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .contact_us__text h2 {
+    font-size: 40px;
+  }
+}
+.contact_us__text p {
+  /* Paragraph styles */
+  color: var(--multilingual-text-color);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.contact_us__img {
+  width: 80%;
+  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  .contact_us__img {
+    width: 100%;
+  }
+}
+.contact_us__img img {
+  /* Image styles */
+  width: 100%;
+  height: auto;
+}
+
+/* Styles for the content region */
+.region.region-content {
+  /* Flexbox layout */
+  display: flex;
+  gap: 20px;
+  /* Gap between flex items */
+}
+@media only screen and (max-width: 768px) {
+  .region.region-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Styles for the content block */
+#block-tutorials24x7-content {
+  /* Set width */
+  width: calc(50% - 10px);
+}
+@media only screen and (max-width: 768px) {
+  #block-tutorials24x7-content {
+    width: 100%;
+  }
+}
+
+/* Styles for contact message form */
+.contact-message-form {
+  /* Form item styles */
+}
+.contact-message-form .form-item label {
+  /* Label styles */
+  margin-bottom: 10px;
+}
+.contact-message-form .form-item label::after {
+  /* Hide label's pseudo element */
+  display: none;
+}
+
+/* Form actions styles */
+@media only screen and (max-width: 768px) {
+  .form-actions {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+
+.js-form-submit {
+  /* Submit button styles */
+  padding: 10px 26px;
+  border-radius: 6px;
+  background: #1c3fea;
+  font-weight: 500;
+  color: #fff;
+  border: 0;
+}
+@media only screen and (max-width: 768px) {
+  .js-form-submit {
+    margin: 0;
+  }
+}

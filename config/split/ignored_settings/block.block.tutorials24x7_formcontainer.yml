@@ -1,0 +1,25 @@
+uuid: bd233f62-41d2-4eb8-9644-d24bf8574333
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:56b165b6-9359-4230-9f53-eb0bd3c7c128'
+  module:
+    - block_content
+  theme:
+    - tutorials24x7
+id: tutorials24x7_formcontainer
+theme: tutorials24x7
+region: footer
+weight: -8
+provider: null
+plugin: 'block_content:56b165b6-9359-4230-9f53-eb0bd3c7c128'
+settings:
+  id: 'block_content:56b165b6-9359-4230-9f53-eb0bd3c7c128'
+  label: 'form container'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

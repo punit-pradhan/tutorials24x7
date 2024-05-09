@@ -1,0 +1,24 @@
+uuid: 1ee0154c-fab4-4322-8bda-3997423a0e50
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.search_categories
+  module:
+    - facets
+  theme:
+    - tutorials24x7
+id: tutorials24x7_search_categories_facet
+theme: tutorials24x7
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:search_categories'
+settings:
+  id: 'facet_block:search_categories'
+  label: 'Search Categories'
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: tutorials24x7_search_categories_facet
+visibility: {  }

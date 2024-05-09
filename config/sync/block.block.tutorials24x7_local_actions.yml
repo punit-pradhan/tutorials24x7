@@ -1,0 +1,20 @@
+uuid: de1c9d94-c345-49d8-be98-d77db371dc31
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tutorials24x7
+_core:
+  default_config_hash: pvnDF_EWX7a1b23DsYSECYVsttXFguvlFOyWi-C8Eqs
+id: tutorials24x7_local_actions
+theme: tutorials24x7
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

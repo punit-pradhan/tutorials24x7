@@ -1,0 +1,20 @@
+uuid: 5017b498-be2d-433a-be17-581d2425aefb
+langcode: en
+status: true
+dependencies:
+  module:
+    - gtranslate
+  theme:
+    - olivero
+id: olivero_gtranslate
+theme: olivero
+region: secondary_menu
+weight: -5
+provider: null
+plugin: gtranslate_block
+settings:
+  id: gtranslate_block
+  label: GTranslate
+  label_display: '0'
+  provider: gtranslate
+visibility: {  }

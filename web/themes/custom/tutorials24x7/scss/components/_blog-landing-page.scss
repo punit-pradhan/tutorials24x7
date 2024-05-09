@@ -1,0 +1,257 @@
+@use "../typography/importers" as *;
+
+// Page regions
+.page-node-type-blog {
+  @include media($bp-large + 1, null) {
+    .region-content-wrapper {
+      width: 68.167%;
+    }
+
+    .sidebar-second-wrapper {
+      width: 31.833%;
+    }
+  }
+
+  .region-content {
+    @include media($bp-large + 1, null) {
+      padding-right: 20px;
+    }
+
+    h1 {
+      color: var(--blog-node-title);
+      letter-spacing: -0.25px;
+
+      @include media(null, $bp-large) {
+        font-size: 25px;
+        line-height: 32.5px;
+        letter-spacing: -0.2px;
+      }
+    }
+  }
+
+  .region-advertisement-section-bottom {
+    margin-top: 20px;
+
+    @include media(null, $bp-large) {
+      display: none;
+    }
+  }
+
+  .region-sidebar-second {
+    @include media($bp-large + 1, null) {
+      padding-left: 20px;
+    }
+
+    .advertise-blog-sidebar {
+      @include media(null, $bp-large) {
+        margin-top: 127px;
+      }
+    }
+  }
+}
+
+// Node content
+.node--type-blog.node--view-mode-full {
+  margin-top: 30px;
+  background-color: var(--body-color);
+
+  .tags-author--content--wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include media(null, $bp-small) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .field--name-field-blog-tags a {
+    color: var(--breadcrumb-color);
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: -0.1px;
+  }
+
+  .field--name-uid,
+  .field--name-created {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 4px;
+      width: 4px;
+      left: -10px;
+      background-color: $gray-color;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.without-tags::before {
+      display: none;
+    }
+
+    @include media(null, $bp-small) {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .field--name-uid {
+    line-height: 24.8px;
+    letter-spacing: -0.016px;
+    color: var(--blog-created-name-by);
+  }
+
+  .blog-author-name,
+  .field--name-created {
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: -0.1px;
+    color: var(--blog-created-name);
+    text-transform: capitalize;
+  }
+
+  .field--name-field-blog-banner-image {
+    margin: 40px 0;
+
+    @include media(null, $bp-large) {
+      margin: 30px 0;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+    }
+  }
+
+  .field--type-text-with-summary {
+    p {
+      line-height: 24.8px;
+      letter-spacing: -0.016px;
+    }
+
+    h2 {
+      font-weight: 500;
+    }
+
+    h3 {
+      font-weight: 500;
+    }
+
+    li {
+      font-weight: 500;
+    }
+
+    pre {
+      font-family: $font-courier;
+      font-weight: 400;
+      font-size: 16px;
+      padding: 20px;
+      color: white;
+      background: $code-background-color;
+    }
+  }
+
+  :has(> code) {
+    padding: 20px;
+    border-radius: 15px;
+    background: $code-background-color;
+  }
+
+  .wrap-editor-image,
+  .image-wrap {
+    position: relative;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  .sharethis-text {
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid var(--Gray-30, #dee2e6);
+
+    @include media(null, $bp-small) {
+      margin-top: 30px;
+    }
+  }
+
+  .sharethis-wrapper {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+// Author block section
+.profile {
+  margin: 60px 0 50px;
+  padding: 35px;
+  border-radius: 15px;
+  display: flex;
+  background: $author-section-background;
+  gap: 30px;
+
+  @include media(null, $bp-large) {
+    margin: 40px 0 0;
+  }
+
+  @include media(null, $bp-small) {
+    flex-direction: column;
+  }
+
+  .field--name-user-picture {
+    width: 80px;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &--inner-wrapper {
+    width: calc(100% - 110px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include media(null, $bp-small) {
+      width: 100%;
+    }
+
+    .field--name-name {
+      color: #051923;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24.3px;
+      letter-spacing: -0.027px;
+    }
+
+    .field--name-field-author-description {
+      color: $code-background-color;
+    }
+
+    .social-media-links--platforms {
+      a {
+        color: black;
+      }
+
+      li:hover a {
+        color: $blue-color;
+      }
+    }
+  }
+
+  @include media(null, $bp-small) {
+    margin: 30px 0 25px;
+    padding: 15px;
+    flex-direction: column;
+  }
+}

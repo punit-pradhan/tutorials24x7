@@ -1,0 +1,29 @@
+uuid: 0a473b80-f2a2-40f5-a80b-1e6dd8b5cb25
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.all_blogs_categories
+  module:
+    - facets
+    - system
+  theme:
+    - tutorials24x7
+id: tutorials24x7_all_blogs_categories_facet
+theme: tutorials24x7
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:all_blogs_categories'
+settings:
+  id: 'facet_block:all_blogs_categories'
+  label: 'All blogs categories'
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: tutorials24x7_all_blogs_categories_facet
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /blogs

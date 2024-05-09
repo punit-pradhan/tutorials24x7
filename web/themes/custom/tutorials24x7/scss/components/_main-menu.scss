@@ -1,0 +1,490 @@
+// Import styles from "../typography/importers"
+@use "../typography/importers"as *;
+
+// Main menu
+.main-menu {
+  display: flex;
+  margin-bottom: 0;
+  padding: 0;
+
+  @include media(null, $bp-large) {
+    @include container-styles;
+    flex-direction: column;
+  }
+}
+
+// Main menu level 0
+.main-menu-level-0 {
+  padding: 5px 15px 14px;
+  gap: 10px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+
+  &:last-child {
+    padding-right: 0;
+
+    @include media(null, $bp-large) {
+      height: 55px;
+    }
+  }
+
+  &:hover {
+    border-bottom: 3px solid var(--navbar-line-hover-color);
+
+    .main-level-0 {
+      color: var(--navbar-text-hover-color);
+
+      @include media(null, $bp-large) {
+        color: var(--navbar-text-color);
+      }
+    }
+  }
+
+  @include media(null, $bp-large) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--navbar-second-level-border-color);
+    padding: 9px 0px;
+
+    &:hover {
+      border-bottom: 1px solid var(--navbar-second-level-border-color);
+    }
+  }
+}
+
+// Main menu level 0 links
+.main-level-0 {
+  font-size: $font-size-sm;
+  color: var(--navbar-text-color);
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: -0.1px;
+}
+
+// Main menu mobile icons
+.mobile-main-menu-icon-back,
+.mobile-main-menu-icon {
+  display: none;
+  color: var(--navbar-text-color);
+  width: 36px;
+  height: 36px;
+  justify-content: end;
+  align-items: center;
+
+  i {
+    font-size: $font-size-md;
+  }
+}
+
+.mobile-main-menu-icon {
+  @include media(null, $bp-large) {
+    display: flex;
+  }
+}
+
+.main-menu-active {
+  @include media(null, $bp-large) {
+    justify-content: flex-start;
+
+    .mobile-main-menu-icon {
+      display: none;
+    }
+
+    .mobile-main-menu-icon-back {
+      display: flex;
+      justify-content: left;
+    }
+  }
+}
+
+.main-menu-level-0.main-menu-active {
+  border-bottom: 3px solid var(--navbar-line-hover-color);
+
+  @include media(null, $bp-large) {
+    border-bottom: 1px solid var(--navbar-mobile-active-color);
+  }
+
+  .main-level-0 {
+    color: var(--navbar-text-hover-color);
+
+    @include media(null, $bp-large) {
+      color: var(--navbar-text-color);
+      border-bottom: 0;
+    }
+  }
+}
+
+// Styles for active level 0 links of the main menu
+a.main-level-0 {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+// Styles for showing the main menu level 1 wrapper and views-exposed-form-blog-category-listing-search and gtranslate_wrapper
+
+#views-exposed-form-blog-category-listing-search,
+.main-menu-level-1-wrapper,
+.gtranslate_wrapper {
+  display: none;
+  cursor: default;
+  position: absolute;
+  top: 99px;
+  z-index: 9;
+  right: 0;
+  left: 0;
+  background-color: var(--navbar-bottom-color);
+  border-bottom: 1px solid var(--navbar-bottom-border-color);
+  box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.2);
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    position: fixed;
+    top: $header-height;
+    height: calc(100% - $header-height);
+    background-color: var(--navbar-bottom-mobile-color);
+  }
+}
+
+// Styles for showing the main menu level 1 wrapper
+.main-menu-level-1-wrapper {
+  padding: 40px 120px;
+}
+
+// Styles for showing the main menu
+.main-menu-show {
+  display: block;
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    padding: 0;
+    top: 125px;
+    box-shadow: 0;
+    border-bottom: 0;
+  }
+
+  // Styles for level 1 of the main menu
+  .main-menu-level-1 {
+    display: grid;
+    column-gap: 50px;
+    row-gap: 20px;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    padding: 0;
+
+    // Responsive styles for large breakpoints
+    @include media($bp-large, 1300px) {
+      grid-template-columns: auto auto auto auto;
+    }
+
+    // Responsive styles for medium breakpoints
+    @include media(null, $bp-large) {
+      @include container-styles;
+      grid-template-columns: 100%;
+      padding-top: 0;
+      row-gap: 0;
+      margin: 0 auto 20px;
+    }
+  }
+}
+
+// Styles for the main menu level 1 with gap
+.menu--main {
+  position: static;
+}
+
+// Styles for the main menu level 1 items with gap
+.main-menu-level-1.gap {
+  row-gap: 30px;
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    gap: 0;
+  }
+}
+
+// Styles for the main menu level 1 item 1
+.main-menu-level-1.item-1 {
+  grid-template-columns: auto;
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    grid-template-columns: 100%;
+  }
+}
+
+// Styles for the main menu level 1 item 2
+.main-menu-level-1.item-2 {
+  grid-template-columns: auto auto;
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    grid-template-columns: 100%;
+  }
+}
+
+// Styles for the main menu level 1 item 3
+.main-menu-level-1.item-3 {
+  grid-template-columns: auto auto auto;
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    grid-template-columns: 100%;
+  }
+}
+
+// Styles for the main menu level 1 item 4
+.main-menu-level-1.item-4 {
+  grid-template-columns: auto auto auto auto;
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    grid-template-columns: 100%;
+  }
+}
+
+// Styles for level 1 links of the main menu
+li.main-level-1 {
+  border-bottom: 0;
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--navbar-second-level-border-color);
+  }
+
+  .main-level-1 {
+    color: var(--navbar-second-level-color);
+    font-size: $font-size-xs;
+    font-weight: 500;
+    line-height: 18.2px;
+    display: inline-block;
+    width: 200px;
+  }
+}
+
+// Styles for the main menu level 2
+.main-menu-level-2 {
+  padding: 0;
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    display: none;
+  }
+}
+
+// Styles for the main menu mobile active state
+.main-menu-mobile-active {
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    display: none;
+  }
+}
+
+// Styles for the gap in the main menu
+.gap {
+  span.main-level-1 {
+    font-size: $font-size-sm;
+    width: 200px;
+    display: inline-block;
+    line-height: 28.8px;
+    letter-spacing: -0.016px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--navbar-second-level-border-color);
+    margin-bottom: 15px;
+
+    // Responsive styles for medium breakpoints
+    @include media(null, $bp-large) {
+      width: 100%;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: -0.1px;
+    }
+  }
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    .main-level-1 {
+      padding: 0;
+    }
+
+    span.main-level-1 {
+      pointer-events: none;
+      position: relative;
+      margin-bottom: 0;
+      padding: 13px 0;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding-right: 25px;
+      border-bottom: 0;
+
+      &::before {
+        content: "\eb11";
+        font: normal normal normal 1em/1 "lineicons";
+        position: absolute;
+        top: 25%;
+        right: 0px;
+        color: var(--navbar-text-color);
+        bottom: 0;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+      }
+    }
+  }
+}
+
+// Styles for the main menu level 2
+.main-menu-level-2 {
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    display: none;
+  }
+}
+
+// Styles for the main menu second level active state
+.main-menu-second-level-active {
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    span.main-level-1 {
+      font-weight: 600;
+
+      &::before {
+        content: "\eb0b";
+      }
+    }
+
+    .main-menu-level-2 {
+      display: block;
+    }
+  }
+}
+
+// Styles for the gap in the main menu
+.gap {
+  .main-menu-level-2 {
+    span.main-level-2 {
+      margin-bottom: 20px;
+      color: var(--navbar-second-level-color);
+      font-size: $font-size-xs;
+      font-weight: 500;
+      line-height: 18.2px;
+      width: auto;
+      padding: 0;
+      border: 0;
+
+      // Responsive styles for medium breakpoints
+      @include media(null, $bp-large) {
+        margin-bottom: 0;
+        padding: 15px 0;
+        border-top: 1px solid var(--navbar-second-level-border-color);
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    span.main-level-2 {
+
+      // Responsive styles for medium breakpoints
+      @include media(null, $bp-large) {
+        font-size: $font-size-xs;
+        margin-bottom: 0;
+        padding: 0;
+        border: 0;
+      }
+    }
+
+    .main-menu-links__item {
+      color: var(--navbar-second-level-color);
+      font-family: $font-lexend;
+      font-size: $font-size-xs;
+      font-style: normal;
+      font-weight: 500;
+      text-decoration: none;
+      line-height: 130%;
+      margin-bottom: 10px;
+
+      &:hover {
+        color: var(--navbar-line-hover-color);
+        text-decoration: underline;
+      }
+
+      // Responsive styles for medium breakpoints
+      @include media(null, $bp-large) {
+        margin-bottom: 0;
+        padding: 0;
+        border: 0;
+      }
+    }
+  }
+}
+
+// Styles for level 1 links of the main menu
+li.main-level-1 .main-menu-links {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 200px;
+
+  img {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    color: var(--navbar-second-level-color);
+    font-family: $font-lexend;
+    font-size: $font-size-xs;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 130%;
+
+    &:hover {
+      color: var(--navbar-line-hover-color);
+      text-decoration: underline;
+    }
+  }
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    width: 100%;
+  }
+}
+
+ul.main-menu-level-2 .main-level-2 {
+  @include media(null, $bp-large) {
+    padding: 7px 15px;
+    display: flex;
+    align-items: center;
+    color: var(--blog-node-title);
+    border-bottom: 1px solid var(--navbar-second-level-border-color);
+  }
+
+  .main-level-1.main-level-2 {
+    border-bottom: 0;
+  }
+}
+
+.main-level-1.main-menu-active.main-menu-second-level-active span {
+  @include media(null, $bp-large) {
+    border-bottom: 1px solid var(--navbar-second-level-border-color);
+  }
+}
+.main-menu-active.main-menu-second-level-active{
+  border-bottom: 0;
+}

@@ -1,0 +1,4 @@
+name: 'T24x7 Recommend AI'
+type: module
+description: 'Recommend AI override for tutorials site.'
+core_version_requirement: ^10

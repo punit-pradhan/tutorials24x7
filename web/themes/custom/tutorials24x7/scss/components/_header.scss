@@ -1,0 +1,119 @@
+// Import styles from "../typography/importers"
+@use "../typography/importers" as *;
+
+// Navbar styles
+.navbar {
+  background-color: var(--navbar-bg-color);
+  position: relative;
+  padding: 0;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+
+  .container-custom {
+    @include container-styles;
+    justify-content: space-between;
+    position: unset;
+    align-items: center;
+
+    // Responsive styles for large breakpoints
+    @include media(null, $bp-large) {
+      height: $header-height;
+    }
+  }
+}
+
+// Header items styles
+.header-items {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+
+  @include media(null, $bp-large) {
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
+
+// Close button styles
+.header-items-close-btn {
+  display: none;
+
+  i {
+    margin: 2.5px 0;
+    font-size: 24px;
+    color: var(--navbar-text-color);
+  }
+
+  @include media(null, $bp-large) {
+    background-color: var(--navbar-bg-color);
+  }
+}
+
+.header-items-close-btn.header-mobile-show {
+  @include media(null, $bp-large) {
+    display: block;
+  }
+}
+
+// Hamburger menu styles
+.navbar-hamburger-menu {
+  display: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+
+  @include media(null, $bp-large) {
+    height: 24px;
+    display: flex;
+
+    i {
+      color: var(--navbar-text-color);
+      font-size: 24px;
+    }
+  }
+}
+
+// Additional navigation region styles
+.region-nav-additional {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0 8px;
+}
+
+// Main navigation region styles
+.region-nav-main {
+  @include media(null, $bp-large) {
+    display: none;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: var(--navbar-bottom-mobile-color);
+    position: fixed;
+    top: $header-height;
+    height: calc(100% - $header-height);
+  }
+}
+
+// Hide theme switcher on desktop
+#theme_switcher_desktop {
+  .dark-and-light-mode-title {
+    display: none;
+  }
+
+  @include media(null, $bp-large) {
+    display: none;
+  }
+}
+
+// Theme switcher mobile styles
+#theme_switcher_mobile {
+  display: none;
+
+  @include media(null, $bp-large) {
+    display: block;
+  }
+}

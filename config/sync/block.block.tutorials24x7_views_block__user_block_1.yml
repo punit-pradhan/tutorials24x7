@@ -1,0 +1,33 @@
+uuid: e0495cc3-049b-4d4c-9baa-046467dd0dae
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user
+  module:
+    - node
+    - views
+  theme:
+    - tutorials24x7
+id: tutorials24x7_views_block__user_block_1
+theme: tutorials24x7
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:user-block_1'
+settings:
+  id: 'views_block:user-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      blog: blog

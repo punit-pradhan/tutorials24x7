@@ -1,0 +1,21 @@
+uuid: 4f1f8ae2-3732-4cdf-80c0-057db22c8513
+langcode: en
+status: true
+dependencies:
+  module:
+    - views_exposed_filter_blocks
+  theme:
+    - tutorials24x7
+id: tutorials24x7_views_exposed_search_block
+theme: tutorials24x7
+region: nav_additional
+weight: -14
+provider: null
+plugin: views_exposed_filter_blocks_block
+settings:
+  id: views_exposed_filter_blocks_block
+  label: 'Search Form'
+  label_display: '0'
+  provider: views_exposed_filter_blocks
+  view_display: 'blog_category_listing:search'
+visibility: {  }

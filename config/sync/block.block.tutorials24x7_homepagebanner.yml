@@ -1,0 +1,34 @@
+uuid: cced23e0-e56c-472b-a49d-b4410d985681
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cfc19153-504b-400b-819d-e710e21a4960'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - tutorials24x7
+third_party_settings:
+  block_class:
+    classes: home__page--banner
+id: tutorials24x7_homepagebanner
+theme: tutorials24x7
+region: breadcrumb
+weight: 0
+provider: null
+plugin: 'block_content:cfc19153-504b-400b-819d-e710e21a4960'
+settings:
+  id: 'block_content:cfc19153-504b-400b-819d-e710e21a4960'
+  label: 'Home Page Banner '
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node

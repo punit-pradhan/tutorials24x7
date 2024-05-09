@@ -1,0 +1,22 @@
+uuid: 4d5fbcf3-a90f-45d4-a419-95e83c9322c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tutorials24x7
+_core:
+  default_config_hash: HZywUkRoNxFVfnsVyh0oKn8Z9ve9sjjfd6YsczZ6Gks
+id: tutorials24x7_content
+theme: tutorials24x7
+region: content
+weight: -9
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

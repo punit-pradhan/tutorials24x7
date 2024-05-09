@@ -1,0 +1,32 @@
+uuid: 255e7d8e-520a-41c7-a90a-a6d5236c751f
+langcode: en
+status: true
+dependencies:
+  module:
+    - adsense
+    - block_class
+  theme:
+    - tutorials24x7
+third_party_settings:
+  block_class:
+    classes: advertise-bottom
+id: tutorials24x7_managedad_bottom
+theme: tutorials24x7
+region: advertisement_section_bottom
+weight: 0
+provider: null
+plugin: adsense_managed_ad_block
+settings:
+  id: adsense_managed_ad_block
+  label: 'Managed ad'
+  label_display: '0'
+  provider: adsense
+  ad_slot: '000000'
+  ad_format: responsive
+  ad_width: null
+  ad_height: null
+  ad_shape:
+    auto: auto
+  ad_align: center
+  ad_layout_key: ''
+visibility: {  }

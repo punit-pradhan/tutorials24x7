@@ -1,0 +1,5 @@
+name: 'Theme Switcher'
+type: module
+description: 'Provides a block to switch between Light and Dark Mode themes.'
+package: Custom
+core_version_requirement: ^10

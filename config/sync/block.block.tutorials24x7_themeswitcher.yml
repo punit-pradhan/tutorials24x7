@@ -1,0 +1,24 @@
+uuid: e2dd042b-67d3-48f5-b163-f928cbe17616
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - theme_switcher
+  theme:
+    - tutorials24x7
+third_party_settings:
+  block_class:
+    replaced_id: theme_switcher_mobile
+id: tutorials24x7_themeswitcher
+theme: tutorials24x7
+region: nav_main
+weight: -8
+provider: null
+plugin: theme_switcher_theme_switch_block
+settings:
+  id: theme_switcher_theme_switch_block
+  label: 'Theme Switcher'
+  label_display: '0'
+  provider: theme_switcher
+visibility: {  }

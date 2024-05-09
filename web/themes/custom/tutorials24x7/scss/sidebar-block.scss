@@ -1,0 +1,95 @@
+@use "./typography/importers" as *;
+
+.region-sidebar-second {
+  @include media($bp-large, null) {
+    position: sticky;
+    top: 40px;
+    height: calc(100vh - 220px);
+    bottom: 20px;
+  }
+}
+
+.block-recommend-ai {
+  > h2 {
+    color: var(--blog-node-title);
+    font-family: $font-grotesk;
+    font-weight: 700;
+    line-height: 32.5px;
+    letter-spacing: -0.2px;
+
+    @include media(null, $bp-large) {
+      margin-top: 30px;
+    }
+  }
+
+  .item-list {
+    overflow-y: auto;
+    margin: 30px 0 20px;
+    padding-right: 15px;
+
+    ul {
+      @include media(null, $bp-large) {
+        margin: 0;
+      }
+    }
+
+    li {
+      margin: 0;
+      padding: 15px 0 20px;
+      border-bottom: 1px solid var(--border-color);
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:hover {
+        .field--name-title {
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .field--name-title {
+    a {
+      color: var(--sidebar-blog-title);
+      font-weight: 500;
+      line-height: 20.8px;
+      letter-spacing: -0.016px;
+    }
+  }
+
+  .tags-date--wrapper {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .field--name-created {
+    position: relative;
+    color: var(--multilingual-text-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 4px;
+      width: 4px;
+      left: -10px;
+      background-color: $gray-color;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

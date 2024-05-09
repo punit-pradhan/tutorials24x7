@@ -1,0 +1,22 @@
+uuid: c8ab5a69-0e29-4287-9d03-2058afd0ac67
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tutorials24x7
+_core:
+  default_config_hash: UzmyTGc0pZEILZQoTgWj83qbYlS0S_GTYqT7dAaNFYQ
+id: tutorials24x7_messages
+theme: tutorials24x7
+region: content
+weight: -13
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

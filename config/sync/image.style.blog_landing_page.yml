@@ -1,0 +1,15 @@
+uuid: fa155579-b372-458f-814e-5b4da62d9526
+langcode: en
+status: true
+dependencies: {  }
+name: blog_landing_page
+label: 'Blog Landing Page'
+effects:
+  6c076f07-3b74-44b5-8b8a-565d38f71c7f:
+    uuid: 6c076f07-3b74-44b5-8b8a-565d38f71c7f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 760
+      height: 428
+      anchor: center-center

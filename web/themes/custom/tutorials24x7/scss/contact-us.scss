@@ -1,0 +1,118 @@
+/* Import typography styles */
+@use "./typography/importers"as *;
+
+/* Styles for the about us content blocks */
+#block-tutorials24x7-contactuscontentblock {
+  /* Set width */
+  width: calc(50% - 10px);
+
+  @include media(null, $bp-medium) {
+    width: 100%;
+  }
+}
+
+/* Styles for the contact us section */
+.contact_us {
+
+  /* Text styles */
+  &__text {
+    h2 {
+      /* Heading styles */
+      color: var(--navbar-text-color);
+      font-size: 55px;
+      font-weight: 700;
+      margin-bottom: 30px;
+
+      @include media(null, $bp-medium) {
+        font-size: $font-size-xxl;
+      }
+    }
+
+    p {
+      /* Paragraph styles */
+      color: var(--multilingual-text-color);
+      font-size: $font-size-sm;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+  }
+
+  /* Image styles */
+  &__img {
+    width: 80%;
+    margin: auto;
+
+    @include media(null, $bp-medium) {
+      width: 100%;
+    }
+
+    img {
+      /* Image styles */
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/* Styles for the content region */
+.region.region-content {
+  /* Flexbox layout */
+  display: flex;
+  gap: 20px;
+
+  /* Gap between flex items */
+  @include media(null, $bp-medium) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Styles for the content block */
+#block-tutorials24x7-content {
+  /* Set width */
+  width: calc(50% - 10px);
+
+  @include media(null, $bp-medium) {
+    width: 100%;
+  }
+}
+
+/* Styles for contact message form */
+.contact-message-form {
+
+  /* Form item styles */
+  .form-item {
+    label {
+      /* Label styles */
+      margin-bottom: 10px;
+
+      &::after {
+        /* Hide label's pseudo element */
+        display: none;
+      }
+    }
+  }
+}
+
+/* Form actions styles */
+.form-actions {
+  @include media(null, $bp-medium) {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+
+.js-form-submit {
+  /* Submit button styles */
+  padding: 10px 26px;
+  border-radius: 6px;
+  background: $blue-color;
+  font-weight: 500;
+  color: $text-color;
+  border: 0;
+
+  @include media(null, $bp-medium) {
+    margin: 0;
+  }
+}

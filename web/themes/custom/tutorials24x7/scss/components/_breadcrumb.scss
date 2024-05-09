@@ -1,0 +1,61 @@
+// Import styles from "../partials/importers"
+@use "../typography/importers" as *;
+
+.banner {
+  position: relative;
+  margin-bottom: 40px;
+
+  @include media(null, $bp-extra-small) {
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    font-size: 50px;
+
+    @include media(null, $bp-medium) {
+      font-size: 35px;
+    }
+  }
+}
+
+.block-system-breadcrumb-block {
+  @include container-styles;
+  margin: 22px auto 40px;
+
+  @include media(null, $bp-large) {
+    margin: 30px auto;
+  }
+
+  a {
+    color: var(--breadcrumb-color);
+    font-size: $font-size-xs;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.region-breadcrumb {
+  background-color: var(--body-color);
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  &:before {
+    color: var(--blog-node-title);
+  }
+}
+
+.path-blogs,
+.path-search,
+.path-taxonomy {
+  .block-system-breadcrumb-block {
+    margin: 22px auto;
+  }
+}

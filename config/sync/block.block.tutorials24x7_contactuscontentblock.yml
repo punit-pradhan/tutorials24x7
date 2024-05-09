@@ -1,0 +1,30 @@
+uuid: 94d09d3d-bde9-47be-98a7-ea248235fbe1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5dd92e9e-4d62-4766-aa07-7f53faec0ecf'
+  module:
+    - block_content
+    - system
+  theme:
+    - tutorials24x7
+id: tutorials24x7_contactuscontentblock
+theme: tutorials24x7
+region: content
+weight: -15
+provider: null
+plugin: 'block_content:5dd92e9e-4d62-4766-aa07-7f53faec0ecf'
+settings:
+  id: 'block_content:5dd92e9e-4d62-4766-aa07-7f53faec0ecf'
+  label: 'contact us content block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact

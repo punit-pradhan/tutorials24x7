@@ -1,0 +1,22 @@
+uuid: 54cee5ca-c5a9-41b5-8ef3-0dc7645c7026
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tutorials24x7
+_core:
+  default_config_hash: f7twq5Ixsexqt3NawtN03dHyN-i_53YoONQTJroFmgM
+id: tutorials24x7_breadcrumbs
+theme: tutorials24x7
+region: breadcrumb
+weight: -11
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

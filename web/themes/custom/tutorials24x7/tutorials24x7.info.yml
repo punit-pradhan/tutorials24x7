@@ -1,0 +1,26 @@
+name: 'Tutorials 24 x 7'
+type: theme
+description: 'Tutorials 24 x 7 subtheme based on Bootstrap 5 theme.'
+core_version_requirement: '^9.4 || ^10'
+'base theme': bootstrap5
+libraries:
+  - tutorials24x7/global-styling
+ckeditor_stylesheets:
+  - css/style.css
+ckeditor5-stylesheets:
+  - css/ck5style.css
+regions:
+  header: 'Header'
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: 'Breadcrumbs'
+  advertisement_section_top: 'Additional region for advertisement'
+  sidebar_first: 'Sidebar first'
+  content: 'Main content'
+  sidebar_second: 'Sidebar Second'
+  advertisement_section_bottom: 'Additional region for advertisement'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'

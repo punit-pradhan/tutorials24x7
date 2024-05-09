@@ -1,0 +1,24 @@
+uuid: df9d7f0e-6066-48a6-8e85-1426449d2278
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tutorials24x7
+id: tutorials24x7_pagetitle_breadcrumb
+theme: tutorials24x7
+region: breadcrumb
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page Title Breadcrumbs'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /blogs

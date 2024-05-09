@@ -1,0 +1,23 @@
+@use "../typography/importers" as *;
+
+.navbar-brand {
+  margin: 0;
+
+  img {
+    width: 212.596px;
+    height: auto;
+    margin: 0;
+
+    @include media(null, $bp-medium) {
+      width: 157.928px;
+    }
+  }
+
+  .site-logo {
+    display: flex !important;
+  }
+
+  .site-title {
+    display: none;
+  }
+}

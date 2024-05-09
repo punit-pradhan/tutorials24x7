@@ -1,0 +1,25 @@
+uuid: 38c5261b-1b2e-4b21-8ac5-c48b696d829d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dc100163-1ce5-46a6-a5e1-a167efc6729a'
+  module:
+    - block_content
+  theme:
+    - tutorials24x7
+id: tutorials24x7_footerdescription
+theme: tutorials24x7
+region: footer
+weight: -7
+provider: null
+plugin: 'block_content:dc100163-1ce5-46a6-a5e1-a167efc6729a'
+settings:
+  id: 'block_content:dc100163-1ce5-46a6-a5e1-a167efc6729a'
+  label: 'footer description'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

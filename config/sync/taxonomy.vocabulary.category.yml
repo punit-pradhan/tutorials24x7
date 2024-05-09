@@ -1,0 +1,8 @@
+uuid: 209dd344-933b-48c7-9dcc-4f26e7f68b41
+langcode: en
+status: true
+dependencies: {  }
+name: Category
+vid: category
+description: 'Categories associated with blogs.'
+weight: 0

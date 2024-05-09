@@ -1,0 +1,9 @@
+uuid: cf2a987c-60af-462e-aa09-31a633414ddc
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__blog_category_listing__all_blogs
+name: 'search_api:views_page__blog_category_listing__all_blogs'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

@@ -1,0 +1,155 @@
+uuid: 70ebe097-6c22-41bc-b0ae-1fff1f59c4f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_social_media_links
+  module:
+    - social_media_links_field
+    - user
+id: user.user.field_social_media_links
+field_name: field_social_media_links
+entity_type: user
+bundle: user
+label: 'social media links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  iconset: 'fontawesome:lg'
+  platforms:
+    patreon:
+      description: ''
+      weight: '-10'
+      enabled: 0
+    pinterest:
+      description: ''
+      weight: '-9'
+      enabled: 0
+    slideshare:
+      description: ''
+      weight: '-8'
+      enabled: 0
+    contact:
+      description: ''
+      weight: '-7'
+      enabled: 0
+    gitlab:
+      description: ''
+      weight: '-6'
+      enabled: 0
+    instagram:
+      description: ''
+      weight: '-5'
+      enabled: 0
+    tumblr:
+      description: ''
+      weight: '-4'
+      enabled: 0
+    googleplus:
+      description: ''
+      weight: '-3'
+      enabled: 0
+    linkedin:
+      enabled: '1'
+      description: ''
+      weight: '-2'
+    vimeo:
+      description: ''
+      weight: '-1'
+      enabled: 0
+    whatsapp:
+      description: ''
+      weight: '0'
+      enabled: 0
+    flickr:
+      description: ''
+      weight: '1'
+      enabled: 0
+    mastodon:
+      description: ''
+      weight: '2'
+      enabled: 0
+    goodreads:
+      description: ''
+      weight: '3'
+      enabled: 0
+    youtube_channel:
+      description: ''
+      weight: '4'
+      enabled: 0
+    website:
+      description: ''
+      weight: '5'
+      enabled: 0
+    tiktok:
+      description: ''
+      weight: '6'
+      enabled: 0
+    email:
+      description: ''
+      weight: '7'
+      enabled: 0
+    glassdoor:
+      description: ''
+      weight: '8'
+      enabled: 0
+    github:
+      description: ''
+      weight: '9'
+      enabled: 0
+    rss:
+      description: ''
+      weight: '10'
+      enabled: 0
+    xing:
+      description: ''
+      weight: '11'
+      enabled: 0
+    vkontakte:
+      description: ''
+      weight: '12'
+      enabled: 0
+    telegram:
+      description: ''
+      weight: '13'
+      enabled: 0
+    youtube:
+      description: ''
+      weight: '14'
+      enabled: 0
+    meetup:
+      description: ''
+      weight: '15'
+      enabled: 0
+    drupal:
+      description: ''
+      weight: '16'
+      enabled: 0
+    twitter:
+      enabled: '1'
+      description: ''
+      weight: '17'
+    behance:
+      description: ''
+      weight: '18'
+      enabled: 0
+    googleplay:
+      description: ''
+      weight: '19'
+      enabled: 0
+    amazon:
+      description: ''
+      weight: '20'
+      enabled: 0
+    bitbucket:
+      description: ''
+      weight: '21'
+      enabled: 0
+    facebook:
+      description: ''
+      weight: '22'
+      enabled: 0
+field_type: social_media_links_field

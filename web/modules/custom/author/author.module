@@ -1,0 +1,38 @@
+<?php
+
+use Drupal\Core\Session\AnonymousUserSession;
+
+/**
+ * @file
+ * Enables the user registration and login system.
+ */
+
+function author_theme() {
+  return [
+    'blog_author' => [
+      'variables' => [
+        'account' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for username templates.
+ *
+ * Default template: username.html.twig.
+ *
+ * Modules that make any changes to variables like 'name' or 'extra' must ensure
+ * that the final string is safe.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - account: The user account (\Drupal\Core\Session\AccountInterface).
+ */
+function template_preprocess_blog_author(&$variables) {
+  $account = $variables['account'] ?: new AnonymousUserSession();
+  if ($account instanceof AnonymousUserSession) {
+    return;
+  }
+  $variables['name'] = $account->getDisplayName();
+}

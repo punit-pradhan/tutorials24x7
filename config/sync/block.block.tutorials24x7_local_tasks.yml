@@ -1,0 +1,22 @@
+uuid: e09ea7f7-bb1b-4f75-be9c-19d3de8aaba4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tutorials24x7
+_core:
+  default_config_hash: fs9JElwJ3hyMGnCip3_qFHFi-VzZ3KVNH4axbDaSxNk
+id: tutorials24x7_local_tasks
+theme: tutorials24x7
+region: content
+weight: -12
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

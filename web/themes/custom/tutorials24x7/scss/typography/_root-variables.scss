@@ -1,0 +1,61 @@
+/* Define custom properties for the light theme */
+:root {
+  --navbar-bg-color: #ffffff;
+  --navbar-text-color: #051923;
+  --page-title-color: #101936;
+  --view-field-title-color: #051923;
+  --navbar-text-hover-color: #1c3fea;
+  --navbar-bottom-mobile-color: #e9ecef;
+  --navbar-bottom-color: #f8f9fa;
+  --navbar-bottom-border-color: #e9ecef;
+  --navbar-second-level-color: #051923;
+  --navbar-second-level-border-color: #ced4da;
+  --navbar-line-hover-color: #1c3fea;
+  --navbar-mobile-active-color: #6c757d;
+  --multilingual-text-color: #6c757d;
+  --body-color: #fff;
+  --text-color: #495057;
+  --sidebar-blog-title: #495057;
+  --blog-node-title: #051923;
+  --breadcrumb-color: #1c3fea;
+  --blog-created-name-by: #495057;
+  --blog-created-name: #343a40;
+  --blog-list-created-name: #6c757d;
+  --border-color: #dee2e6;
+  --filter-text: #6c757d;
+  --filter-text-active: #1c3fea;
+  --filter-text-icon: #343a40;
+  --filter-section-background-color: #f8f9fa;
+  --filter-section-active-background-color: #ebf8ff;
+}
+
+/* Define custom properties for the dark theme */
+[data-theme="dark"] {
+  --navbar-bg-color: #071125;
+  --navbar-text-color: #fff;
+  --page-title-color: #233ba2;
+  --view-field-title-color: #dee2e6;
+  --navbar-text-hover-color: #fff;
+  --navbar-bottom-mobile-color: #253148;
+  --navbar-bottom-color: #253148;
+  --navbar-bottom-border-color: #3b465a;
+  --navbar-second-level-color: #dee2e6;
+  --navbar-second-level-border-color: #3b465a;
+  --navbar-line-hover-color: #00a6fb;
+  --navbar-mobile-active-color: #3b465a;
+  --multilingual-text-color: #dee2e6;
+  --body-color: #232b45;
+  --text-color: #e9ecef;
+  --sidebar-blog-title: #dee2e6;
+  --blog-node-title: #fff;
+  --breadcrumb-color: #00a6fb;
+  --blog-created-name-by: #adb5bd;
+  --blog-created-name: #e9ecef;
+  --blog-list-created-name: #ced4da;
+  --border-color: #3b465a;
+  --filter-text: #fff;
+  --filter-text-active: #51b9ff;
+  --filter-text-icon: #fff;
+  --filter-section-background-color: #3b465a;
+  --filter-section-active-background-color: #3b465a;
+}

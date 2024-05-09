@@ -1,0 +1,25 @@
+uuid: 6cfd0ddf-de3e-45cc-b0ac-493f17b0fc2f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:954d6fe7-f65c-4b97-a01a-bf5eefcfe087'
+  module:
+    - block_content
+  theme:
+    - tutorials24x7
+id: tutorials24x7_copyrightsection
+theme: tutorials24x7
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:954d6fe7-f65c-4b97-a01a-bf5eefcfe087'
+settings:
+  id: 'block_content:954d6fe7-f65c-4b97-a01a-bf5eefcfe087'
+  label: 'copyright section'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

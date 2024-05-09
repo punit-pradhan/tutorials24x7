@@ -1,0 +1,13 @@
+<?php
+
+use Drupal\Core\Block\BlockPluginInterface;
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function t24x7_recommend_ai_block_view_alter(array &$build, BlockPluginInterface $block) {
+  // Add the library from the theme to all blocks.
+  if($block->getPluginId() == 'ai_recommend_content'){
+    $build['#attached']['library'][] = 'tutorials24x7/sidebar-block';
+  }
+}

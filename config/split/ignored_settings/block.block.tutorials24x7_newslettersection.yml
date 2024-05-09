@@ -1,0 +1,25 @@
+uuid: ee888676-bcca-48e0-834d-61e8c6c47484
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:24c31d7f-3f88-422d-b77f-baa9c669ad2a'
+  module:
+    - block_content
+  theme:
+    - tutorials24x7
+id: tutorials24x7_newslettersection
+theme: tutorials24x7
+region: footer
+weight: -9
+provider: null
+plugin: 'block_content:24c31d7f-3f88-422d-b77f-baa9c669ad2a'
+settings:
+  id: 'block_content:24c31d7f-3f88-422d-b77f-baa9c669ad2a'
+  label: 'newsletter section'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

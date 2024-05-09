@@ -1,0 +1,32 @@
+uuid: ceb550bb-42af-4242-8801-efccf1ee5fba
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - recommend_ai
+  theme:
+    - tutorials24x7
+id: tutorials24x7_ai_recommend_content
+theme: tutorials24x7
+region: sidebar_second
+weight: -8
+provider: null
+plugin: ai_recommend_content
+settings:
+  id: ai_recommend_content
+  label: 'Related Blogs'
+  label_display: visible
+  provider: recommend_ai
+  view_mode: teaser
+  recommendation_count: '5'
+  field: body
+  type_of_content: blog
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      blog: blog

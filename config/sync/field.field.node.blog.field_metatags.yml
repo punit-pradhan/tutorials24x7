@@ -1,0 +1,21 @@
+uuid: 8dddcab7-d145-4c00-b5db-1ac45f5a4d7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.blog
+  module:
+    - metatag
+id: node.blog.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: blog
+label: Metatags
+description: 'Override metatags on per node basis.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

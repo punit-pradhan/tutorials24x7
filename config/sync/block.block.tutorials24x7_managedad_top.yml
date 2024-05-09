@@ -1,0 +1,37 @@
+uuid: 7098e2a7-8d60-4483-97e1-b5894f61036a
+langcode: en
+status: true
+dependencies:
+  module:
+    - adsense
+    - block_class
+    - system
+  theme:
+    - tutorials24x7
+third_party_settings:
+  block_class:
+    classes: advertise-top
+id: tutorials24x7_managedad_top
+theme: tutorials24x7
+region: advertisement_section_top
+weight: 0
+provider: null
+plugin: adsense_managed_ad_block
+settings:
+  id: adsense_managed_ad_block
+  label: 'Managed ad'
+  label_display: '0'
+  provider: adsense
+  ad_slot: '0000'
+  ad_format: responsive
+  ad_width: null
+  ad_height: null
+  ad_shape:
+    auto: auto
+  ad_align: center
+  ad_layout_key: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/search\r\n/blogs\r\n/taxonomy/term/*"

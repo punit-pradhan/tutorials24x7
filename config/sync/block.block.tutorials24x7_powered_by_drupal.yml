@@ -1,0 +1,22 @@
+uuid: c1152bb6-a2e9-4e65-8125-d8fc6201e7f8
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - tutorials24x7
+_core:
+  default_config_hash: 4xXO1QIyf_tC9dBK9ne3KIQ_mCQl8A9j9ziNTI7NUeY
+id: tutorials24x7_powered_by_drupal
+theme: tutorials24x7
+region: header
+weight: -3
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,6 @@
+{
+    "phpcs.executablePath": "./vendor/bin/phpcs",
+    "phpcs.standard": "Drupal,DrupalPractice",
+    "phpcbf.executablePath": "./vendor/bin/phpcbf",
+    "phpcbf.standard": "Drupal,DrupalPractice"
+}

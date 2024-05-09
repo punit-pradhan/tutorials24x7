@@ -1,0 +1,29 @@
+uuid: 225290f2-9228-459b-ab78-47b2dee22903
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.taxonomy_term
+  module:
+    - system
+    - views
+  theme:
+    - tutorials24x7
+id: tutorials24x7_views_block__taxonomy_term_languages
+theme: tutorials24x7
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:taxonomy_term-languages'
+settings:
+  id: 'views_block:taxonomy_term-languages'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

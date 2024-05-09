@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Theme Switcher module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function theme_switcher_theme($existing, $type, $theme, $path) {
+  return [
+    'dark_theme' => [
+      'variables' => [],
+    ],
+  ];
+}

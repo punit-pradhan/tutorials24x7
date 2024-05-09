@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: b006a75a-6dda-4594-ac50-aa55ac1edfdc
+name: Tutorials24x7
+mail: info@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/492
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

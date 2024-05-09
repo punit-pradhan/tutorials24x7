@@ -1,0 +1,81 @@
+{#
+  Theme override to display a menu.
+
+  Available variables:
+  - menu_name: The machine name of the menu.
+  - items: A nested list of menu items. Each menu item contains:
+    - attributes: HTML attributes for the menu item.
+    - below: The menu item child items.
+    - title: The menu link title.
+    - url: The menu link URL, instance of \Drupal\Core\Url
+    - localized_options: Menu link localized options.
+    - is_expanded: TRUE if the link has visible children within the current menu tree.
+    - is_collapsed: TRUE if the link has children within the current menu tree that are not currently visible.
+    - in_active_trail: TRUE if the link is in the active trail.
+#}
+
+{# Attach the tutorials24x7/main-menu library to the current page or render array #}
+
+<div class="menu-wrapper">
+  <ul data-block="header" class="main-menu">
+    {% for item in items %}
+      <li class="main-menu-level-0">
+        {% if item.url %}
+          {% if item.url.isRouted() and item.url.getRouteName() != '<nolink>' %}
+            <a href="{{ item.url }}" {{ item.attributes.addClass(["main-level-0", "item"]) }}>{{ item.title }}</a>
+          {% else %}
+            <div class="mobile-main-menu-icon-back">
+              <i class="lni lni-arrow-left"></i>
+            </div>
+             <span {{ item.attributes.addClass(["main-level-0", "item"]) }}>{{ item.title }}</span>
+            <div class="mobile-main-menu-icon">
+              <i class="lni lni-chevron-right"></i>
+            </div>
+          {% endif %}
+        {% else %}
+           <span {{ item.attributes.addClass(["main-level-0", "item"]) }}>{{ item.title }}</span>
+        {% endif %}
+        {% if item.below %}
+          <div class="main-menu-level-1-wrapper">
+            <ul class="main-menu-level-1">
+              {% for subItem in item.below %}
+                <li class="main-level-1">
+                  {% if subItem.url %}
+                    {% if subItem.url.isRouted() and subItem.url.getRouteName() != '<nolink>' %}
+                      <div class="main-menu-links">
+                        <a href="{{ subItem.url }}" {{ subItem.attributes.addClass(["main-level-1", "main-menu-links__item"]) }}>{{ subItem.title }}</a>
+                      </div>
+                    {% else %}
+                      <span {{ subItem.attributes.addClass(["main-level-1", "item"]) }}>{{ subItem.title }}</span>
+                    {% endif %}
+                  {% else %}
+                    <span {{ subItem.attributes.addClass(["main-level-1", "item"]) }}>{{ subItem.title }}</span>
+                  {% endif %}
+                  {% if subItem.below %}
+                    <ul class="main-menu-level-2">
+                      {% for subSubItem in subItem.below %}
+                        <li class="main-level-2">
+                          {% if subSubItem.url %}
+                            {% if subSubItem.url.isRouted() and subSubItem.url.getRouteName() != '<nolink>' %}
+                              <div class="main-menu-links">
+                                <a href="{{ subSubItem.url }}" {{ subItem.attributes.addClass(["main-level-2", "main-menu-links__item"]) }}>{{ subSubItem.title }}</a>
+                              </div>
+                            {% else %}
+                              <span {{ subItem.attributes.addClass(["main-level-2", "item"]) }}>{{ subSubItem.title }}</span>
+                            {% endif %}
+                          {% else %}
+                            <span {{ subItem.attributes.addClass(["main-level-2", "item"]) }}>{{ subSubItem.title }}</span>
+                          {% endif %}
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

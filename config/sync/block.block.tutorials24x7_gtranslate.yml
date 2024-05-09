@@ -1,0 +1,20 @@
+uuid: e312eda8-bbb1-4c6f-ab26-840208392b01
+langcode: en
+status: true
+dependencies:
+  module:
+    - gtranslate
+  theme:
+    - tutorials24x7
+id: tutorials24x7_gtranslate
+theme: tutorials24x7
+region: nav_additional
+weight: -13
+provider: null
+plugin: gtranslate_block
+settings:
+  id: gtranslate_block
+  label: GTranslate
+  label_display: '0'
+  provider: gtranslate
+visibility: {  }

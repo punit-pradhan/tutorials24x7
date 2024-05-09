@@ -1,0 +1,27 @@
+uuid: cb07621d-0b0c-469f-a1e8-ed5abbd60499
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - tutorials24x7
+_core:
+  default_config_hash: FTHt5a_wXmDruDy79-dyG-Ljkqb-9ZZB2BH2DFV-_1A
+id: tutorials24x7_main_navigation
+theme: tutorials24x7
+region: nav_main
+weight: -9
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 3
+  expand_all_items: true
+visibility: {  }

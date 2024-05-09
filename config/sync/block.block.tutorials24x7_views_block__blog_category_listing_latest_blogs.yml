@@ -1,0 +1,29 @@
+uuid: 7cc7a65e-2520-4002-8833-f882cf676b1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog_category_listing
+  module:
+    - system
+    - views
+  theme:
+    - tutorials24x7
+id: tutorials24x7_views_block__blog_category_listing_latest_blogs
+theme: tutorials24x7
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:blog_category_listing-latest_blogs'
+settings:
+  id: 'views_block:blog_category_listing-latest_blogs'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

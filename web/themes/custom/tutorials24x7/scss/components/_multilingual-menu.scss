@@ -1,0 +1,119 @@
+// Import styles from "../typography/importers"
+@use "../typography/importers"as *;
+
+// Contextual region block
+.block-gtranslate.block-gtranslate-block {
+  position: unset;
+}
+
+// Multilingual icon
+.multilingual-icon {
+  @include media(null, $bp-large) {
+    margin: 0 12px;
+  }
+}
+
+// Mltilingual and search box icons
+.multilingual-icon,
+div.search-box-icon {
+  display: flex;
+  padding: 9px 10px 7px;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size-l;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+
+  @include media(null, $bp-large) {
+    padding: 0;
+    font-size: 24px;
+  }
+
+  i {
+    color: var(--navbar-text-color);
+  }
+
+  @include media($bp-large + 1, null) {
+    &:hover {
+      border-bottom: 3px solid var(--navbar-line-hover-color);
+    }
+  }
+}
+
+// Styles for active multilingual and search box icons
+.multilingual-menu-active,
+.search-box-icon.SearchBox-menu-active {
+  border-bottom: 3px solid var(--navbar-line-hover-color);
+}
+
+/* Styles for the Google Translate wrapper */
+.gtranslate_wrapper {
+  padding: 40px 215px 42px;
+  gap: 20px;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: center;
+
+  // Responsive styles for medium breakpoints
+  @include media(null, $bp-large) {
+    grid-template-columns: auto;
+    padding: 20px 0;
+  }
+
+ // Styles for current language in Google Translate links
+ .glink.nturl.notranslate.gt-current-lang {
+  background: $blue-color;
+  border: none;
+
+  img {
+    opacity: 1;
+  }
+
+  span {
+    color: $text-color;
+  }
+}
+  // Styles for Google Translate links
+  .glink.nturl.notranslate {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--multilingual-text-color);
+    height: 35px;
+
+    img {
+      width: 21.429px;
+      height: 15px;
+    }
+
+    span {
+      color: var(--multilingual-text-color);
+      font-size: $font-size-xs;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    // Hover styles for Google Translate links
+    &:hover {
+      background: $blue-color;
+      border: 1px solid $blue-color;
+
+      span {
+        color: $text-color;
+      }
+    }
+
+    @include media(null, $bp-large) {
+      min-width: 130px;
+      width: fit-content;
+      margin: 0 auto 20px;
+    }
+  }
+}
+
+// Styles for showing the Google Translate wrapper
+.gtranslate_wrapper.multilingual-menu-show {
+  display: grid;
+}

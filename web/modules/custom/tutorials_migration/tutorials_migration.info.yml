@@ -1,0 +1,8 @@
+name: Tutorials Migration
+type: module
+description: 'Provides migrate plugin for Tutorials24x7 data migration.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools

@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Tutorials 24 x 7 theme file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function tutorials24x7_theme_suggestions_user_alter(array &$suggestions, array $variables) {
+  if ($variables['elements']['#view_mode'] == 'teaser') {
+    $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+    $suggestions[] = 'user__' . $sanitized_view_mode;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function tutorials24x7_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] === 'views-exposed-form-blog-category-listing-search') {
+    $form['actions'] = [];
+  }
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function tutorials24x7_preprocess_node(&$variables) {
+  if ($variables['node']->getType() === 'blog' && $variables['view_mode'] === 'full') {
+    $variables['#attached']['library'][] = 'tutorials24x7/blog-node-page';
+  }
+}
+
+/**
+ * Implements template_preprocess_block().
+ */
+function tutorials24x7_preprocess_block(&$variables) {
+  // Check if this is the block you want to attach the library to.
+  if ($variables['attributes']['id'] === 'block-tutorials24x7-all-blogs-categories-facet' || $variables['attributes']['id'] === 'block-tutorials24x7-search-categories-facet') {
+    $variables['#attached']['library'][] = 'tutorials24x7/filter-section';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function tutorials24x7_preprocess_page(&$variables) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  // Check if the current path is /contact.
+  if ($current_path === '/contact') {
+    // Attach the library to the page.
+    $variables['#attached']['library'][] = 'tutorials24x7/contact-us';
+  }
+}

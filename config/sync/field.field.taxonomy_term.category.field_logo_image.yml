@@ -1,0 +1,38 @@
+uuid: 14c25f2b-57da-4463-8a95-6f63fdf89c47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_logo_image
+    - taxonomy.vocabulary.category
+  module:
+    - image
+id: taxonomy_term.category.field_logo_image
+field_name: field_logo_image
+entity_type: taxonomy_term
+bundle: category
+label: 'Logo Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'category-logo-image/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

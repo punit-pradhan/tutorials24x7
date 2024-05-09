@@ -1,0 +1,4 @@
+name: Author
+description: Contains author related features.
+type: module
+core_version_requirement: ^10

@@ -1,0 +1,25 @@
+uuid: 98bd6d11-d684-4368-930c-c6e3a77c2d52
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:51b06f34-c8bf-4fcf-89f7-1ce3a0e61a05'
+  module:
+    - block_content
+  theme:
+    - tutorials24x7
+id: tutorials24x7_footerbranding
+theme: tutorials24x7
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:51b06f34-c8bf-4fcf-89f7-1ce3a0e61a05'
+settings:
+  id: 'block_content:51b06f34-c8bf-4fcf-89f7-1ce3a0e61a05'
+  label: 'footer branding'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

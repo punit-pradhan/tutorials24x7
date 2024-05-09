@@ -1,0 +1,25 @@
+uuid: 8c1b0eb4-2262-485d-a072-c01edb7f8e16
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tutorials24x7
+_core:
+  default_config_hash: tuARDXWQAzrxuBgkSDJO6wtWozUPujuk8NjZFrQnLVQ
+id: tutorials24x7_branding
+theme: tutorials24x7
+region: nav_branding
+weight: -9
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

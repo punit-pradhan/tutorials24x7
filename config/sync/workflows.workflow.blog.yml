@@ -1,0 +1,64 @@
+uuid: f0204ab3-7563-4ebf-8114-fb6c2a1f56b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+  module:
+    - content_moderation
+id: blog
+label: Blog
+type: content_moderation
+type_settings:
+  states:
+    approved:
+      label: Approved
+      weight: 0
+      published: false
+      default_revision: false
+    draft:
+      label: Draft
+      weight: -2
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 1
+      published: true
+      default_revision: true
+    review:
+      label: Review
+      weight: -1
+      published: false
+      default_revision: false
+  transitions:
+    assign_for_review:
+      label: 'Assign for review'
+      from:
+        - draft
+      to: review
+      weight: -1
+    content_approved:
+      label: 'Content Approved'
+      from:
+        - review
+      to: approved
+      weight: 0
+    create_new_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+        - published
+      to: draft
+      weight: -2
+    publish:
+      label: Publish
+      from:
+        - approved
+        - published
+      to: published
+      weight: 1
+  entity_types:
+    node:
+      - blog
+  default_moderation_state: draft

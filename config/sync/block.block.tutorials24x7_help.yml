@@ -1,0 +1,22 @@
+uuid: c3c0580d-a1af-4a3a-b282-1935e867cc10
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - tutorials24x7
+_core:
+  default_config_hash: exBnRaCcwBWuaO6s4ng5c3eyL_Dfc96e3E9dOH7zen4
+id: tutorials24x7_help
+theme: tutorials24x7
+region: content
+weight: -11
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

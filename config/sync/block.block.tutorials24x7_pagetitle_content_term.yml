@@ -1,0 +1,27 @@
+uuid: da4fe6de-bdb9-460e-a055-e5b211030386
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+  theme:
+    - tutorials24x7
+id: tutorials24x7_pagetitle_content_term
+theme: tutorials24x7
+region: breadcrumb
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page Title Content Term'
+  label_display: '0'
+  provider: core
+visibility:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      category: category

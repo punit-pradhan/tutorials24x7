@@ -1,0 +1,14 @@
+uuid: 03004fc5-f4d7-4f64-bcdf-e18868555d90
+langcode: en
+status: true
+dependencies: {  }
+name: taxonomy_logo_image
+label: 'Taxonomy Logo Image'
+effects:
+  70cb680d-ea01-4b6d-a6ad-aba6f3ec8fb4:
+    uuid: 70cb680d-ea01-4b6d-a6ad-aba6f3ec8fb4
+    id: image_resize
+    weight: 1
+    data:
+      width: 60
+      height: 60

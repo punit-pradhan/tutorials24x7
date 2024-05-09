@@ -1,0 +1,20 @@
+uuid: e917344a-8fed-4c7e-b24b-39121a434c46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_author_description
+  module:
+    - user
+id: user.user.field_author_description
+field_name: field_author_description
+entity_type: user
+bundle: user
+label: 'Author Description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,77 @@
+@use "../typography/importers" as *;
+
+// Search block form
+.views-exposed-form.block-search {
+  position: unset;
+}
+
+#views-exposed-form-blog-category-listing-search {
+  padding: 40px 0;
+  justify-content: center;
+
+  .form--inline.clearfix {
+    display: flex;
+  }
+
+  .search-cross-icon {
+    position: absolute;
+    right: 40px;
+    top: 12.5px;
+    cursor: pointer;
+  }
+
+  .form-text {
+    padding: 12.5px 44px 12.5px 49px;
+    height: 50px;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 6px;
+    border: 1px solid $mobile-menu-color;
+    background: #fff;
+    color: $gray-light-color;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.016px;
+  }
+
+  input::placeholder {
+    color: $gray-light-color;
+    font-family: $font-lexend;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 20.8px;
+    letter-spacing: -0.016px;
+
+    @include media(null, $bp-large) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+
+  @include media(null, $bp-large) {
+    padding: 20px 0;
+  }
+}
+
+// Show search form
+.SearchBox-menu-show .js-form-type-textfield {
+  position: relative;
+  @include container-styles;
+
+  // Search icon
+  &::before {
+    content: "\ea17";
+    font: normal normal normal 1em/1 "lineicons";
+    position: absolute;
+    color: #051923;
+    left: 40px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+  }
+}

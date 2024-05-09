@@ -1,0 +1,45 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      //cdn.lineicons.com/4.0/lineicons.css: { type: external }
+  js:
+    js/darkmode.js: {}
+    js/common-blocks.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+
+sidebar-block:
+  css:
+    theme:
+      css/sidebar-block.css: {}
+  js:
+    js/sidebar-block.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+
+blog-node-page:
+  js:
+    js/blog-node.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+
+filter-section:
+  js:
+    js/filter-section.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+
+contact-us:
+  css:
+    theme:
+      css/contact-us.css: {}

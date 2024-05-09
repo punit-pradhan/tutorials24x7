@@ -1,0 +1,242 @@
+// Import styles from "../typography/importers"
+@use "../typography/importers" as *;
+
+.home__page--banner {
+  margin-bottom: 60px;
+  color: $text-color;
+
+  .banner__background {
+    img {
+      width: 100%;
+    }
+  }
+
+  .banner__content {
+    h1 {
+      font-size: 50px;
+    }
+
+    p {
+      width: 39%;
+      margin: 46px 0 40px 0;
+    }
+
+    .banner__button {
+      display: inline-block;
+      padding: 17px 25px;
+      background-color: $blue-color;
+      border-radius: 6px;
+
+      a {
+        color: $text-color;
+      }
+    }
+  }
+}
+
+.background__div {
+  background-color: #f5f5f5;
+}
+
+.block-views-blockblog-category-listing-latest-blogs {
+  margin: 80px 0;
+
+  .view-content {
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+  }
+
+  h2 {
+    margin-bottom: 60px;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.3px;
+
+    @include media(null, $bp-extra-small) {
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+
+  .footer-button {
+    @include media($bp-medium, null) {
+      position: absolute;
+      bottom: 100%;
+      right: 0;
+    }
+
+    .more-link {
+      height: max-content;
+      padding: 17px 25px;
+      background-color: $blue-color;
+      border-radius: 6px;
+      a {
+        color: $text-color;
+      }
+    }
+  }
+
+  .views-row {
+    flex: 0 0 calc(100% / 4);
+    max-width: 512px;
+    margin-bottom: 50px;
+    transition: transform 0.4;
+
+    @include media(null, $bp-extra-small) {
+      margin-bottom: 30px;
+    }
+
+    &:hover {
+      .field--name-field-blog-banner-image {
+        overflow: hidden;
+        border-radius: 5px;
+      }
+
+      .image-style-blog-listing-card {
+        transform: scale(1.1);
+      }
+    }
+
+    @include media(null, $bp-medium) {
+      flex: 0 0 calc(100% / 2);
+    }
+
+    @include media(null, $bp-extra-small) {
+      flex: 0 0 100%;
+    }
+  }
+
+  .node--view-mode-blog-listing {
+    margin: 0 15px;
+    height: 100%;
+  }
+
+  .node__content {
+    height: 100%;
+  }
+
+  .content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field--name-field-blog-banner-image {
+    margin-bottom: 25px;
+
+    @include media(null, $bp-extra-small) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .image-style-blog-listing-card {
+    border-radius: 5px;
+  }
+
+  .field--name-title {
+    h2 {
+      font-size: 18px;
+      line-height: 24.3px;
+      letter-spacing: -0.027px;
+      margin-bottom: 0;
+
+      @include media(null, $bp-extra-small) {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.2px;
+      }
+    }
+
+    a {
+      color: var(--navbar-text-color);
+    }
+  }
+
+  .tags-author-wrapper {
+    margin-top: auto;
+  }
+
+  .field--name-field-blog-tags {
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.2px;
+
+    @include media(null, $bp-extra-small) {
+      margin-top: 15px;
+    }
+  }
+
+  .field--name-uid {
+    line-height: 24.8px;
+    letter-spacing: -0.016px;
+    color: var(--blog-created-name-by);
+    margin-top: 30px;
+
+    @include media(null, $bp-extra-small) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  .blog-author-name {
+    text-transform: capitalize;
+    color: var(--blog-list-created-name);
+  }
+}
+
+.block-views-blocktaxonomy-term-languages {
+  margin-bottom: 80px;
+  h2 {
+    margin: 60px 0;
+    font-family: "Space Grotesk";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.3px;
+  }
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  .views-row {
+    flex: 0 0 calc(100% / 5);
+    max-width: 512px;
+    margin-bottom: 20px;
+
+    @include media(null, $bp-medium) {
+      flex: 0 0 calc(100% / 2);
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+
+      .field--name-name {
+        a {
+          color: var(--text-color);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 25px; /* 138.889% */
+          letter-spacing: -0.15px;
+        }
+      }
+    }
+  }
+
+  .vocabulary-category {
+    margin: 0 10px;
+    height: 100%;
+    border-radius: 20px;
+  }
+}

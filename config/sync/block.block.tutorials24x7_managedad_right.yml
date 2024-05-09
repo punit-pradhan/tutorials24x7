@@ -1,0 +1,45 @@
+uuid: c2593ed2-8f91-425d-9a13-14d525c95421
+langcode: en
+status: true
+dependencies:
+  module:
+    - adsense
+    - block_class
+    - node
+    - system
+  theme:
+    - tutorials24x7
+third_party_settings:
+  block_class:
+    classes: advertise-blog-sidebar
+id: tutorials24x7_managedad_right
+theme: tutorials24x7
+region: sidebar_second
+weight: -7
+provider: null
+plugin: adsense_managed_ad_block
+settings:
+  id: adsense_managed_ad_block
+  label: 'Managed ad'
+  label_display: '0'
+  provider: adsense
+  ad_slot: '00000000000'
+  ad_format: responsive
+  ad_width: null
+  ad_height: null
+  ad_shape:
+    auto: auto
+  ad_align: center
+  ad_layout_key: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/blogs\r\n/php\r\n/search"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      blog: blog
